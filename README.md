@@ -1,27 +1,31 @@
-# SVGAPP
+# Angular-SVG
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+1.Install SVG with npm 
 
-## Development server
+`npm install angular-svg` 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2.Go to app.modules.ts and add
 
-## Code scaffolding
+`import { SvgCircleModule, SvgLineModule, SvgPolygonModule, SvgPolylineModule, SvgTextModule, SvgPathModule, SvgEllipseModule } from 'angular-svg'`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3.Inject it at NgModules
 
-## Build
+`@NgModule ({
+  imports: [BrowserModule, FormsModule, SvgCircleModule, SvgLineModule, SvgPolygonModule, SvgPolylineModule, SvgTextModule, SvgPathModule, SvgEllipseModule]
+  
+})`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4.Go to Component.html 
 
-## Running unit tests
+` <svg >
+    <g svg-circle [circle]="circle"></g>
+            </svg>
+`
+5.Go to component.ts 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`circle:Circle;
+    this.circle = { cx: 50, cy: 50, r: 10, stroke: this.colorstroke };`
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

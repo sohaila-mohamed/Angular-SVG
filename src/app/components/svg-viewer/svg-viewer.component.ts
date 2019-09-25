@@ -17,6 +17,9 @@ export class SVGViewerComponent implements OnInit {
   
   ngOnInit() {
     this.circle = { cx: 50, cy: 50, r: 10, stroke: this.colorstroke };
+    
+    
+
 
   }
 
