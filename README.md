@@ -10,17 +10,14 @@
 
 3.Inject it at NgModules
 
-`@NgModule ({
-  imports: [BrowserModule, FormsModule, SvgCircleModule, SvgLineModule, SvgPolygonModule, SvgPolylineModule, SvgTextModule, SvgPathModule, SvgEllipseModule]
-  
-})`
+`@NgModule({
+  imports: [BrowserModule, FormsModule, SvgCircleModule, SvgLineModule, SvgPolygonModule, SvgPolylineModule, SvgTextModule, SvgPathModule, SvgEllipseModule]})`
 
 4.Go to Component.html 
 
 ` <svg >
-    <g svg-circle [circle]="circle"></g>
-            </svg>
-`
+    <g svg-circle [circle]="circle"></g></svg>`
+    
 5.Go to component.ts 
 
 `circle:Circle;
