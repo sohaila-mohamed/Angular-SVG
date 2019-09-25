@@ -22,5 +22,8 @@ export class SVGViewerComponent implements OnInit {
 
 
   }
+  MovePoint(){
+    this.circle.
+  }
 
 }
