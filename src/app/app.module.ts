@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SVGViewerComponent } from './components/svg-viewer/svg-viewer.component';
+import { SvgCircleModule, SvgLineModule, SvgPolygonModule, SvgPolylineModule, SvgTextModule, SvgPathModule, SvgEllipseModule } from 'angular-svg'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SVGViewerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule, 
+      SvgCircleModule, SvgLineModule,
+       SvgPolygonModule, SvgPolylineModule, SvgTextModule,
+        SvgPathModule, SvgEllipseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
