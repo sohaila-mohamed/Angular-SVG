@@ -22,8 +22,19 @@ export class SVGViewerComponent implements OnInit {
 
 
   }
-  MovePoint(){
-    this.circle.
+  MovePoint(event){
+    let clientRect = event.target.getBoundingClientRect();
+    let x = clientRect.left; //x position within the element.
+    let y = clientRect.top;  //y position within the element.
+    let cx=event.clientX-x ;
+    let cy=event.clientY-y;
+    this.circle = { cx: cx, cy: cy, r: 10, stroke: this.colorstroke };
+   console.log("X",event.clientX,"Y",event.clientY);
+   console.log("clientx",event.clientX,"clienty",event.clientY);
+   console.log("cX",cx,"cY",cy);
+
+    
+    
   }
 
 }

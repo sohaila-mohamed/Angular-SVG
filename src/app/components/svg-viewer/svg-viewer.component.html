@@ -4,9 +4,9 @@
       <div class="col-4">
   
       </div>
-      <div class="col-4"  > 
-          <svg >
-              <g svg-circle
+      <div class="col-4" (mousedown)="MovePoint($event)" id="svg-div" > 
+          <svg id="svg">
+              <g svg-circle 
                   [circle]="circle"></g>
             </svg>
       </div>
